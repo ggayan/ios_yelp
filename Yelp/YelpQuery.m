@@ -11,8 +11,6 @@
 
 @interface YelpQuery ()
 
-@property (nonatomic) NSString *defaultSearchTerm;
-
 @end
 
 @implementation YelpQuery

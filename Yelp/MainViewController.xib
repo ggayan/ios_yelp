@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MW9-Pe-IjW">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MW9-Pe-IjW">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,11 +31,7 @@
                 <constraint firstItem="MW9-Pe-IjW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TSe-Id-K0o"/>
                 <constraint firstItem="MW9-Pe-IjW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a7g-KC-WIB"/>
             </constraints>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="wuY-Ph-fBG" appends="YES" id="ZNs-Xl-Fhn"/>
-            </connections>
             <point key="canvasLocation" x="307" y="238"/>
         </view>
-        <tapGestureRecognizer id="wuY-Ph-fBG"/>
     </objects>
 </document>

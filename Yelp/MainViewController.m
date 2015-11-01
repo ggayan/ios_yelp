@@ -25,8 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Yelp";
+
+    self.query = [YelpQuery new];
+
     self.searchBar = [UISearchBar new];
-    self.searchBar.placeholder = @"Restaurants";
+    self.searchBar.placeholder = self.query.defaultSearchTerm;
+
     self.searchBar.delegate = self;
     [self.searchBar sizeToFit];
 
@@ -40,8 +44,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"BusinessCell"];
 
     self.businesses = @[];
-
-    self.query = [YelpQuery new];
     [self updateResults];
 }
 
@@ -62,17 +64,25 @@
     return cell;
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
+}
+
 #pragma mark - Search bar methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"search");
-    //    [self updateResults];
+    self.query.searchTerm = searchBar.text;
+    [self updateResults];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"cancel");
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if ([searchText isEqualToString:@""]) {
+        [searchBar resignFirstResponder];
+        self.query.searchTerm = @"";
+        [self updateResults];
+    }
 }
-
 #pragma mark - Filter delegate methods
 
 - (void)filterViewsController:(FiltersViewController *)filtersViewController didChangeQuery:(YelpQuery *)query {
