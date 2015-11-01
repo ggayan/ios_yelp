@@ -11,38 +11,50 @@
 
 @interface FiltersViewController () <UITableViewDataSource, UITableViewDelegate, SwitchCellDelegate>
 
-@property (nonatomic, readonly) NSDictionary *filters;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSArray *categories;
-@property (nonatomic) NSMutableSet *selectedCategories;
 
 - (void)initCategories;
 
 @end
 
 @implementation FiltersViewController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
+- (id)initWithQuery:(YelpQuery *)query {
+    self = [super initWithNibName:@"FiltersViewController" bundle:nil];
+
     if(self) {
-        self.selectedCategories = [NSMutableSet set];
         [self initCategories];
+
+        if (query) {
+            self.query = query;
+        } else {
+            self.query = [YelpQuery new];
+        }
     }
-    
+
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Apply" style:UIBarButtonItemStylePlain target:self action:@selector(onApplyButton)];
+
+    self.navigationItem.leftBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"Cancel"
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(onCancelButton)
+     ];
+    self.navigationItem.rightBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"Apply"
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(onApplyButton)
+     ];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-
-    [self.tableView registerNib:[UINib nibWithNibName:@"SwitchCell" bundle:nil] forCellReuseIdentifier:@"SwitchCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"SwitchCell" bundle:nil]
+         forCellReuseIdentifier:@"SwitchCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,9 +68,9 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
 
     if(value) {
-        [self.selectedCategories addObject:self.categories[indexPath.row]];
+        [self.query.selectedCategories addObject:self.categories[indexPath.row]];
     } else {
-        [self.selectedCategories removeObject:self.categories[indexPath.row]];
+        [self.query.selectedCategories removeObject:self.categories[indexPath.row]];
     }
 }
 
@@ -73,35 +85,20 @@
     SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell"];
 
     cell.titleLabel.text = self.categories[indexPath.row][@"name"];
-    cell.on = [self.selectedCategories containsObject:self.categories[indexPath.row]];
+    cell.on = [self.query.selectedCategories containsObject:self.categories[indexPath.row]];
     cell.delegate = self;
 
     return cell;
 }
 
-#pragma mark - Private Methods
-
-- (NSDictionary *)filters {
-    NSMutableDictionary *filters = [NSMutableDictionary dictionary];
-
-    if(self.selectedCategories.count > 0) {
-        NSMutableArray *names = [NSMutableArray array];
-        for (NSDictionary *category in self.selectedCategories) {
-            [names addObject:category[@"code"]];
-        }
-
-        [filters setObject:names forKey:@"category_filter"];
-    }
-
-    return filters;
-}
+#pragma mark - Private methods
 
 - (void)onCancelButton {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)onApplyButton {
-    [self.delegate filterViewsController:self didChangeFilters:self.filters];
+    [self.delegate filterViewsController:self didChangeQuery:self.query];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

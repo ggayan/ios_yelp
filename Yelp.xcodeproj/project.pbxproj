@@ -13,6 +13,7 @@
 		2473E4B11BE59F7500C40DAC /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2473E4AF1BE59F7500C40DAC /* FiltersViewController.xib */; };
 		2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4B31BE5A7D400C40DAC /* SwitchCell.m */; };
 		2473E4B61BE5A7D400C40DAC /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */; };
+		2473E4B91BE5E7CE00C40DAC /* YelpQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */; };
 		24E075D61BE3260D00486F5D /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E075D41BE3260D00486F5D /* BusinessCell.m */; };
 		24E075D71BE3260D00486F5D /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E075D51BE3260D00486F5D /* BusinessCell.xib */; };
 		420474F618DC299500E88E07 /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 420474F518DC299500E88E07 /* YelpClient.m */; };
@@ -53,6 +54,8 @@
 		2473E4B21BE5A7D400C40DAC /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
 		2473E4B31BE5A7D400C40DAC /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
 		2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		2473E4B71BE5E7CE00C40DAC /* YelpQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpQuery.h; sourceTree = "<group>"; };
+		2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpQuery.m; sourceTree = "<group>"; };
 		24E075D31BE3260D00486F5D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		24E075D41BE3260D00486F5D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		24E075D51BE3260D00486F5D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 			children = (
 				11F304FD1BDC476D000ED8EF /* YelpBusiness.h */,
 				11F304FE1BDC476D000ED8EF /* YelpBusiness.m */,
+				2473E4B71BE5E7CE00C40DAC /* YelpQuery.h */,
+				2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			files = (
 				42FD6C5B18DC286B000BF2B9 /* AppDelegate.m in Sources */,
 				2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */,
+				2473E4B91BE5E7CE00C40DAC /* YelpQuery.m in Sources */,
 				42FD6C5718DC286B000BF2B9 /* main.m in Sources */,
 				420474F618DC299500E88E07 /* YelpClient.m in Sources */,
 				420474FB18DC2B2100E88E07 /* MainViewController.m in Sources */,

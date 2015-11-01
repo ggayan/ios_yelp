@@ -9,13 +9,14 @@
 #import "MainViewController.h"
 #import "FiltersViewController.h"
 #import "YelpBusiness.h"
+#import "YelpQuery.h"
 #import "BusinessCell.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, FiltersViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSArray *businesses;
 @property (nonatomic) UISearchBar *searchBar;
-@property (nonatomic) NSDictionary *filters;
+@property (nonatomic) YelpQuery *query;
 
 @end
 
@@ -39,28 +40,16 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"BusinessCell" bundle:nil] forCellReuseIdentifier:@"BusinessCell"];
 
     self.businesses = @[];
-    self.filters = @{@"category_filter": @[]};
 
+    self.query = [YelpQuery new];
     [self updateResults];
 }
 
-- (void) updateResults {
-    NSString *searchTerm = [self.searchBar.text length] > 0 ? self.searchBar.text : self.searchBar.placeholder;
-
-    [YelpBusiness searchWithTerm:searchTerm
-                        sortMode:YelpSortModeBestMatched
-                      categories:self.filters[@"category_filter"]
-                           deals:NO
-                      completion:^(NSArray *businesses, NSError *error) {
-
-                          self.businesses = businesses;
-                          [self.tableView reloadData];
-                          //
-                          //                          for (YelpBusiness *business in businesses) {
-                          //                              NSLog(@"%@", business);
-                          //                          }
-                      }];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
+
+#pragma mark - Table view methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.businesses.count;
@@ -73,6 +62,8 @@
     return cell;
 }
 
+#pragma mark - Search bar methods
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"search");
     //    [self updateResults];
@@ -82,25 +73,33 @@
     NSLog(@"cancel");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - Filter delegate methods
-- (void)filterViewsController:(FiltersViewController *)filtersViewController didChangeFilters:(NSDictionary *)filters {
-    self.filters = filters;
 
+- (void)filterViewsController:(FiltersViewController *)filtersViewController didChangeQuery:(YelpQuery *)query {
+    self.query = query;
     [self updateResults];
 }
 
 #pragma mark - Private methods
 
 - (void)onFilterButton {
-    FiltersViewController *vc = [FiltersViewController new];
+    FiltersViewController *vc = [[FiltersViewController alloc] initWithQuery:self.query];
     vc.delegate = self;
 
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nvc animated:YES completion:nil];
+}
+
+- (void)configureYelp {
+
+}
+
+- (void)updateResults {
+//    NSString *searchTerm = [self.searchBar.text length] > 0 ? self.searchBar.text : self.searchBar.placeholder;
+    [self.query executeWithCompletion:^(NSArray *businesses, NSError *error) {
+        self.businesses = businesses;
+        [self.tableView reloadData];
+    }];
 }
 
 

@@ -7,17 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YelpQuery.h"
 
 @class FiltersViewController;
 
 @protocol FiltersViewControllerDelegate <NSObject>
 
-- (void)filterViewsController:(FiltersViewController *)filtersViewController didChangeFilters:(NSDictionary *)filters;
+- (void)filterViewsController:(FiltersViewController *)filtersViewController didChangeQuery:(YelpQuery *)query;
 
 @end
 
 @interface FiltersViewController : UIViewController
 
 @property (nonatomic, weak) id<FiltersViewControllerDelegate> delegate;
+@property (nonatomic) YelpQuery *query;
+
+- (id)initWithQuery:(YelpQuery *)query;
 
 @end
