@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		11F304F81BDC02C1000ED8EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F304F71BDC02C1000ED8EF /* LaunchScreen.storyboard */; };
 		11F304FF1BDC476D000ED8EF /* YelpBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F304FE1BDC476D000ED8EF /* YelpBusiness.m */; };
+		2473E4B01BE59F7500C40DAC /* FiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4AE1BE59F7500C40DAC /* FiltersViewController.m */; };
+		2473E4B11BE59F7500C40DAC /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2473E4AF1BE59F7500C40DAC /* FiltersViewController.xib */; };
+		2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4B31BE5A7D400C40DAC /* SwitchCell.m */; };
+		2473E4B61BE5A7D400C40DAC /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */; };
+		24E075D61BE3260D00486F5D /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E075D41BE3260D00486F5D /* BusinessCell.m */; };
+		24E075D71BE3260D00486F5D /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E075D51BE3260D00486F5D /* BusinessCell.xib */; };
 		420474F618DC299500E88E07 /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 420474F518DC299500E88E07 /* YelpClient.m */; };
 		420474FB18DC2B2100E88E07 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 420474F918DC2B2100E88E07 /* MainViewController.m */; };
 		420474FC18DC2B2100E88E07 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 420474FA18DC2B2100E88E07 /* MainViewController.xib */; };
@@ -41,6 +47,15 @@
 		11F304F71BDC02C1000ED8EF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F304FD1BDC476D000ED8EF /* YelpBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpBusiness.h; sourceTree = "<group>"; };
 		11F304FE1BDC476D000ED8EF /* YelpBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpBusiness.m; sourceTree = "<group>"; };
+		2473E4AD1BE59F7500C40DAC /* FiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersViewController.h; sourceTree = "<group>"; };
+		2473E4AE1BE59F7500C40DAC /* FiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersViewController.m; sourceTree = "<group>"; };
+		2473E4AF1BE59F7500C40DAC /* FiltersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
+		2473E4B21BE5A7D400C40DAC /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		2473E4B31BE5A7D400C40DAC /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		24E075D31BE3260D00486F5D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
+		24E075D41BE3260D00486F5D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
+		24E075D51BE3260D00486F5D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		420474F418DC299500E88E07 /* YelpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpClient.h; sourceTree = "<group>"; };
 		420474F518DC299500E88E07 /* YelpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpClient.m; sourceTree = "<group>"; };
 		420474F818DC2B2100E88E07 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -101,6 +116,19 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		24E075D21BE325D900486F5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24E075D31BE3260D00486F5D /* BusinessCell.h */,
+				24E075D41BE3260D00486F5D /* BusinessCell.m */,
+				24E075D51BE3260D00486F5D /* BusinessCell.xib */,
+				2473E4B21BE5A7D400C40DAC /* SwitchCell.h */,
+				2473E4B31BE5A7D400C40DAC /* SwitchCell.m */,
+				2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		420474F318DC297600E88E07 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +144,9 @@
 				420474F818DC2B2100E88E07 /* MainViewController.h */,
 				420474F918DC2B2100E88E07 /* MainViewController.m */,
 				420474FA18DC2B2100E88E07 /* MainViewController.xib */,
+				2473E4AD1BE59F7500C40DAC /* FiltersViewController.h */,
+				2473E4AE1BE59F7500C40DAC /* FiltersViewController.m */,
+				2473E4AF1BE59F7500C40DAC /* FiltersViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -157,6 +188,7 @@
 			children = (
 				11F304F91BDC20F3000ED8EF /* Models */,
 				420474F318DC297600E88E07 /* API */,
+				24E075D21BE325D900486F5D /* Views */,
 				420474F718DC2A9200E88E07 /* View Controllers */,
 				42FD6C5918DC286B000BF2B9 /* AppDelegate.h */,
 				42FD6C5A18DC286B000BF2B9 /* AppDelegate.m */,
@@ -255,6 +287,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = codepath;
 				TargetAttributes = {
+					42FD6C4618DC286A000BF2B9 = {
+						DevelopmentTeam = 772NMS87XD;
+					};
 					42FD6C6118DC286B000BF2B9 = {
 						TestTargetID = 42FD6C4618DC286A000BF2B9;
 					};
@@ -283,9 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E075D71BE3260D00486F5D /* BusinessCell.xib in Resources */,
 				42FD6C5518DC286B000BF2B9 /* InfoPlist.strings in Resources */,
 				11F304F81BDC02C1000ED8EF /* LaunchScreen.storyboard in Resources */,
 				420474FC18DC2B2100E88E07 /* MainViewController.xib in Resources */,
+				2473E4B11BE59F7500C40DAC /* FiltersViewController.xib in Resources */,
+				2473E4B61BE5A7D400C40DAC /* SwitchCell.xib in Resources */,
 				42FD6C5D18DC286B000BF2B9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,10 +392,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FD6C5B18DC286B000BF2B9 /* AppDelegate.m in Sources */,
+				2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */,
 				42FD6C5718DC286B000BF2B9 /* main.m in Sources */,
 				420474F618DC299500E88E07 /* YelpClient.m in Sources */,
 				420474FB18DC2B2100E88E07 /* MainViewController.m in Sources */,
+				2473E4B01BE59F7500C40DAC /* FiltersViewController.m in Sources */,
 				11F304FF1BDC476D000ED8EF /* YelpBusiness.m in Sources */,
+				24E075D61BE3260D00486F5D /* BusinessCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,9 +516,11 @@
 			baseConfigurationReference = FCA9D9EAA444BE83C105EDA0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Yelp/Yelp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp/Yelp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -489,9 +532,11 @@
 			baseConfigurationReference = A28C751BD8043032F84076DB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Yelp/Yelp-Prefix.pch";
 				INFOPLIST_FILE = "Yelp/Yelp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
