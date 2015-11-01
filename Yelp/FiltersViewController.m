@@ -11,6 +11,7 @@
 
 @interface FiltersViewController () <UITableViewDataSource, UITableViewDelegate, SwitchCellDelegate>
 
+@property (weak, nonatomic) IBOutlet UISwitch *offeringDealSwitch;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSArray *categories;
 
@@ -50,6 +51,8 @@
                                     target:self
                                     action:@selector(onApplyButton)
      ];
+
+    [self.offeringDealSwitch setOn:self.query.offeringDeal animated:NO];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -98,6 +101,8 @@
 }
 
 - (void)onApplyButton {
+    self.query.offeringDeal = self.offeringDealSwitch.on;
+
     [self.delegate filterViewsController:self didChangeQuery:self.query];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

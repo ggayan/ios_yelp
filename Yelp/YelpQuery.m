@@ -22,6 +22,7 @@
     if (self) {
         self.defaultSearchTerm = @"Restaurants";
         self.searchTerm = self.defaultSearchTerm;
+        self.offeringDeal = NO;
         self.selectedCategories = [NSMutableSet set];
     }
 
@@ -32,7 +33,7 @@
     [YelpBusiness searchWithTerm:self.searchTerm
                         sortMode:YelpSortModeBestMatched
                       categories:[self categories]
-                           deals:NO
+                           deals:self.offeringDeal
                       completion:completion
      ];
 }

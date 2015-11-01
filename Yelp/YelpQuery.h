@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *searchTerm;
 @property (nonatomic) NSString *defaultSearchTerm;
+@property (nonatomic) BOOL offeringDeal;
 @property (nonatomic) NSMutableSet *selectedCategories;
 
 - (void)executeWithCompletion:(void (^)(NSArray *businesses, NSError *error))completion;
