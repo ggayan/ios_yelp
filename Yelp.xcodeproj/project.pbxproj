@@ -57,6 +57,7 @@
 		2473E4B71BE5E7CE00C40DAC /* YelpQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpQuery.h; sourceTree = "<group>"; };
 		2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpQuery.m; sourceTree = "<group>"; };
 		2473E4BC1BE874CB00C40DAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2473E4BD1BE8777700C40DAC /* walkthrough.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = walkthrough.gif; sourceTree = SOURCE_ROOT; };
 		24E075D31BE3260D00486F5D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		24E075D41BE3260D00486F5D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		24E075D51BE3260D00486F5D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 		42FD6C5018DC286B000BF2B9 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
+				2473E4BD1BE8777700C40DAC /* walkthrough.gif */,
 				11F304F91BDC20F3000ED8EF /* Models */,
 				420474F318DC297600E88E07 /* API */,
 				24E075D21BE325D900486F5D /* Views */,
