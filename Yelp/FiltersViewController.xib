@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController">
             <connections>
-                <outlet property="offeringDealSwitch" destination="WAz-M8-uG4" id="i4E-KF-A5U"/>
                 <outlet property="tableView" destination="hZi-bt-pB0" id="6w1-B5-gYd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,58 +16,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaH-fZ-Xf4">
-                    <rect key="frame" x="8" y="8" width="304" height="36.5"/>
-                    <subviews>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAz-M8-uG4">
-                            <rect key="frame" x="247" y="3" width="51" height="31"/>
-                            <animations/>
-                        </switch>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offering a Deal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-h9-cO2">
-                            <rect key="frame" x="8" y="8" width="122.5" height="20.5"/>
-                            <animations/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hZi-bt-pB0">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstItem="jIS-h9-cO2" firstAttribute="top" secondItem="EaH-fZ-Xf4" secondAttribute="top" constant="8" id="8g4-oK-CcL"/>
-                        <constraint firstItem="jIS-h9-cO2" firstAttribute="leading" secondItem="EaH-fZ-Xf4" secondAttribute="leading" constant="8" id="CAs-e8-LwY"/>
-                        <constraint firstItem="WAz-M8-uG4" firstAttribute="centerY" secondItem="jIS-h9-cO2" secondAttribute="centerY" id="XNF-cF-Y7z"/>
-                        <constraint firstAttribute="trailing" secondItem="WAz-M8-uG4" secondAttribute="trailing" constant="8" id="pmw-aV-94m"/>
-                        <constraint firstAttribute="bottom" secondItem="jIS-h9-cO2" secondAttribute="bottom" constant="8" id="ywa-Xa-2Ap"/>
-                    </constraints>
-                </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjv-ip-D7s">
-                    <rect key="frame" x="8" y="52.5" width="70.5" height="20.5"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hZi-bt-pB0">
-                    <rect key="frame" x="8" y="81" width="304" height="237"/>
-                    <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="237" id="SGM-h2-RNK"/>
-                    </constraints>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="EaH-fZ-Xf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="5GN-78-JbO"/>
-                <constraint firstItem="vjv-ip-D7s" firstAttribute="top" secondItem="EaH-fZ-Xf4" secondAttribute="bottom" constant="8" id="DUI-6s-sUA"/>
-                <constraint firstItem="EaH-fZ-Xf4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="V2J-Zn-njh"/>
-                <constraint firstItem="hZi-bt-pB0" firstAttribute="top" secondItem="vjv-ip-D7s" secondAttribute="bottom" constant="8" id="Vfu-gV-3YL"/>
-                <constraint firstAttribute="trailing" secondItem="EaH-fZ-Xf4" secondAttribute="trailing" constant="8" id="bHa-6t-sX7"/>
-                <constraint firstItem="hZi-bt-pB0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nBh-Pc-Ful"/>
-                <constraint firstAttribute="trailing" secondItem="hZi-bt-pB0" secondAttribute="trailing" constant="8" id="slP-aD-Z2e"/>
-                <constraint firstItem="vjv-ip-D7s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zKJ-LW-zKh"/>
+                <constraint firstAttribute="trailing" secondItem="hZi-bt-pB0" secondAttribute="trailing" id="JDB-y9-Ba8"/>
+                <constraint firstItem="hZi-bt-pB0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QyQ-Gw-csf"/>
+                <constraint firstAttribute="bottom" secondItem="hZi-bt-pB0" secondAttribute="bottom" id="TyF-oz-mWR"/>
+                <constraint firstItem="hZi-bt-pB0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jM1-Hs-A4y"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="155" y="331"/>

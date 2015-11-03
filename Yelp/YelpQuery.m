@@ -23,6 +23,8 @@
         self.defaultSearchTerm = @"Restaurants";
         self.searchTerm = self.defaultSearchTerm;
         self.offeringDeal = NO;
+        self.distance = 0;
+        self.sortMode = YelpSortModeBestMatched;
         self.selectedCategories = [NSMutableSet set];
     }
 
@@ -31,7 +33,8 @@
 
 - (void)executeWithCompletion:(void (^)(NSArray *businesses, NSError *error))completion {
     [YelpBusiness searchWithTerm:self.searchTerm
-                        sortMode:YelpSortModeBestMatched
+                        sortMode:self.sortMode
+                   radius_filter:[self distanceInMeters]
                       categories:[self categories]
                            deals:self.offeringDeal
                       completion:completion
@@ -56,6 +59,12 @@
     }
 
     return [categories copy];
+}
+
+- (NSInteger)distanceInMeters {
+    float metersPerMile = 1609.34;
+    NSArray *miles = @[@0.0f, @0.3f, @1.0f, @5.0f, @20.0f];
+    return [miles[self.distance] floatValue] * metersPerMile;
 }
 
 @end

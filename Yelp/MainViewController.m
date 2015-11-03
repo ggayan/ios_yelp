@@ -105,7 +105,6 @@
 }
 
 - (void)updateResults {
-//    NSString *searchTerm = [self.searchBar.text length] > 0 ? self.searchBar.text : self.searchBar.placeholder;
     [self.query executeWithCompletion:^(NSArray *businesses, NSError *error) {
         self.businesses = businesses;
         [self.tableView reloadData];

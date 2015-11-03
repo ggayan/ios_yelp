@@ -48,6 +48,7 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
     
     return [self searchWithTerm:term
                        sortMode:YelpSortModeBestMatched
+                  radius_filter:0
                      categories:nil
                           deals:NO
                      completion:completion];
@@ -55,6 +56,7 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
 
 - (AFHTTPRequestOperation *)searchWithTerm:(NSString *)term
                                   sortMode:(YelpSortMode)sortMode
+                             radius_filter:(NSInteger)radius_filter
                                 categories:(NSArray *)categories
                                      deals:(BOOL)hasDeal
                                 completion:(void (^)(NSArray *businesses, NSError *error))completion {
@@ -71,6 +73,10 @@ NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
     
     if (hasDeal) {
         parameters[@"deals_filter"] = [NSNumber numberWithBool:hasDeal];
+    }
+
+    if (radius_filter > 0) {
+        parameters[@"radius_filter"] = [NSNumber numberWithInteger:radius_filter];
     }
     
     NSLog(@"%@", parameters);

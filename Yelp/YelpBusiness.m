@@ -76,12 +76,14 @@
 
 + (void)searchWithTerm:(NSString *)term
               sortMode:(YelpSortMode)sortMode
+         radius_filter:(NSInteger)radius_filter
             categories:(NSArray *)categories
                  deals:(BOOL)hasDeal
             completion:(void (^)(NSArray *businesses, NSError *error))completion {
 
     [[YelpClient sharedInstance] searchWithTerm:term
                                        sortMode:sortMode
+                                  radius_filter:radius_filter
                                      categories:categories
                                           deals:hasDeal
                                      completion:completion];
