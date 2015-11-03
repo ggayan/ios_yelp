@@ -14,6 +14,7 @@
 		2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4B31BE5A7D400C40DAC /* SwitchCell.m */; };
 		2473E4B61BE5A7D400C40DAC /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */; };
 		2473E4B91BE5E7CE00C40DAC /* YelpQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */; };
+		2473E4BF1BE8793000C40DAC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2473E4BE1BE8793000C40DAC /* README.md */; };
 		24E075D61BE3260D00486F5D /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E075D41BE3260D00486F5D /* BusinessCell.m */; };
 		24E075D71BE3260D00486F5D /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E075D51BE3260D00486F5D /* BusinessCell.xib */; };
 		420474F618DC299500E88E07 /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 420474F518DC299500E88E07 /* YelpClient.m */; };
@@ -56,8 +57,8 @@
 		2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
 		2473E4B71BE5E7CE00C40DAC /* YelpQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpQuery.h; sourceTree = "<group>"; };
 		2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpQuery.m; sourceTree = "<group>"; };
-		2473E4BC1BE874CB00C40DAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2473E4BD1BE8777700C40DAC /* walkthrough.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = walkthrough.gif; sourceTree = SOURCE_ROOT; };
+		2473E4BE1BE8793000C40DAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		24E075D31BE3260D00486F5D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		24E075D41BE3260D00486F5D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		24E075D51BE3260D00486F5D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -161,6 +162,8 @@
 		42FD6C3E18DC286A000BF2B9 = {
 			isa = PBXGroup;
 			children = (
+				2473E4BE1BE8793000C40DAC /* README.md */,
+				2473E4BD1BE8777700C40DAC /* walkthrough.gif */,
 				42FD6C5018DC286B000BF2B9 /* Yelp */,
 				42FD6C6918DC286B000BF2B9 /* YelpTests */,
 				42FD6C4918DC286B000BF2B9 /* Frameworks */,
@@ -193,7 +196,6 @@
 		42FD6C5018DC286B000BF2B9 /* Yelp */ = {
 			isa = PBXGroup;
 			children = (
-				2473E4BD1BE8777700C40DAC /* walkthrough.gif */,
 				11F304F91BDC20F3000ED8EF /* Models */,
 				420474F318DC297600E88E07 /* API */,
 				24E075D21BE325D900486F5D /* Views */,
@@ -203,7 +205,6 @@
 				42FD6C5C18DC286B000BF2B9 /* Images.xcassets */,
 				11F304F71BDC02C1000ED8EF /* LaunchScreen.storyboard */,
 				42FD6C5118DC286B000BF2B9 /* Supporting Files */,
-				2473E4BC1BE874CB00C40DAC /* README.md */,
 			);
 			path = Yelp;
 			sourceTree = "<group>";
@@ -402,6 +403,7 @@
 			files = (
 				42FD6C5B18DC286B000BF2B9 /* AppDelegate.m in Sources */,
 				2473E4B51BE5A7D400C40DAC /* SwitchCell.m in Sources */,
+				2473E4BF1BE8793000C40DAC /* README.md in Sources */,
 				2473E4B91BE5E7CE00C40DAC /* YelpQuery.m in Sources */,
 				42FD6C5718DC286B000BF2B9 /* main.m in Sources */,
 				420474F618DC299500E88E07 /* YelpClient.m in Sources */,
