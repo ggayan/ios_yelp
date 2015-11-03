@@ -56,6 +56,7 @@
 		2473E4B41BE5A7D400C40DAC /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
 		2473E4B71BE5E7CE00C40DAC /* YelpQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpQuery.h; sourceTree = "<group>"; };
 		2473E4B81BE5E7CE00C40DAC /* YelpQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpQuery.m; sourceTree = "<group>"; };
+		2473E4BC1BE874CB00C40DAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		24E075D31BE3260D00486F5D /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		24E075D41BE3260D00486F5D /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		24E075D51BE3260D00486F5D /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 				42FD6C5C18DC286B000BF2B9 /* Images.xcassets */,
 				11F304F71BDC02C1000ED8EF /* LaunchScreen.storyboard */,
 				42FD6C5118DC286B000BF2B9 /* Supporting Files */,
+				2473E4BC1BE874CB00C40DAC /* README.md */,
 			);
 			path = Yelp;
 			sourceTree = "<group>";
